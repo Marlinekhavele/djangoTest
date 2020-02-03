@@ -14,3 +14,4 @@ def about_page(request):
 
 def contact_page(request):
     return render(request, "home.html", {"title": "Contact us"})
+
