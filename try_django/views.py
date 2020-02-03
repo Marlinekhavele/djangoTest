@@ -4,11 +4,12 @@ from django.shortcuts import render
 
 def home_page(request):
     my_title = "Hello Marline"
-    return render(request, "home.html", {"title": my_title})
+    context = {"title": my_title}
+    return render(request, "home.html", context)
 
 
 def about_page(request):
-    return render(request, "home.html", {"title": "About us"})
+    return render(request, "about.html", {"title": "About"})
 
 
 def contact_page(request):
