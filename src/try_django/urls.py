@@ -18,6 +18,7 @@ from django.contrib import admin
 from django.urls import path, include
 from .views import home_page, about_page, contact_page
 from blog.views import blog_post_create_view
+from searches.views import search_view
 
 urlpatterns = [
     path("admin/", admin.site.urls),
@@ -26,6 +27,7 @@ urlpatterns = [
     path("contact/", contact_page),
     path("blog-new/", blog_post_create_view),
     path("blog/", include("blog.urls")),
+    path('search/', search_view),
 ]
 
 if settings.DEBUG:
